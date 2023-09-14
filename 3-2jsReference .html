@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reference Techniques </title>
+
+    <script type="text/javascript">
+        "use strict";
+        function bodyload(){
+            poster.src="../public/images/men__1.2.jpg";
+            formlogin.buttonlogin.value="Login";
+            formregister.buttonregister.value="Register"
+        }
+    </script>
+
+</head>
+<body onload="bodyload()">
+    <div>
+        <img width="300" height="300" border="1" name="poster">
+    </div>  
+    <div>
+        <form name="formlogin">  
+            <h3>LogIn</h3>
+            User Name : <input type="text"> <input type="button" name="buttonlogin">
+        </form>
+    </div>
+    <div>
+        <form name="formregister">
+            <h3>Register</h3>
+            Your Email : <input type="email"> <input type="button" name="buttonregister">
+        </form>
+    </div>
+</body>
+</html>

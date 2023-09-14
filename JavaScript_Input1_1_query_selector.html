@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Input</title>
+    <script>
+        function bodyload(){
+            querystring =location.search;
+            equalposition =querystring.indexof("=");
+            value=querystring.slice(equalposition+1);
+            document.getElementById("search").innerHTML=value;
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <p>Searching For : <span id="search"></span></p>
+</body>
+</html>

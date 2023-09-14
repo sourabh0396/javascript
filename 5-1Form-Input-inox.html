@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inox</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    
+    <script type="text/javascript">
+        "use strict";
+        function Grtsummary(){
+            document.getElementById("lebelMovie").innerText=document.getElementById("lstMovie").value;
+            document.getElementById("lebelCinema").innerText=document.getElementById("lstCinema").value;
+            document.getElementById("lebelDate").innerText=document.getElementById("lstDate").value;
+            document.getElementById("lebelTime").innerText=document.getElementById("lstTime").value;
+            document.getElementById("lebelSeates").innerText=document.getElementById("lstSeates").value;
+
+            movieName = document.getElementById("lstMovie").value;
+            imgPoster = document.getElementById("imgposter");
+
+            if(movieName == "Gadar2"){
+                imgPoster.src="../public/images/Gadar2.JPG";
+            } 
+            else {
+                imgPoster.src= "../public/images/Jawan.JPG";
+            }
+            
+        }
+    </script>
+
+</head>
+<body class="container-fluid">
+    <button data-bs-target="#movies" data-bs-toggle="modal" class="btn btn-danger mt-2">Quick Booking</button>
+    <div class="modal fade" id="movies">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Quick Booking</h3>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <nav class="d-flex bg-dark text-white p-2 justify-content-between">
+                        <div>
+                            <select class="form-select" id="lstMovies">
+                                <option>Select Movie</option>
+                                <option>Gadar2</option>
+                                <option>Jawan</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form-select" id="lstCinema">
+                                <option>Select Cinema</option>
+                                <option>INOX - B-Hills</option>
+                                <option>INOX - KPHB</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form-select" id="lstDate">
+                                <option>Select Date</option>
+                                <option>TODAY 10 - sep - 2023</option>
+                                <option>TOMORROW 11 - sep - 2023</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form-select" id="lstTime">
+                                <option>Select Time </option>
+                                <option>10:30 AM</option>
+                                <option>04:30 PM</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="form-select" id="lstSeats">
+                                <option>Select Seats</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button onclick="Grtsummary()" data-bs-dismiss="modal"  class="btn btn-danger"> BOOK</button>
+                        </div>
+                    </nav>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <dl class="w-25">
+            <h3 class="bg-dark text-white p-2">Booking Summary</h3>
+            <img width="250" height="250" border="1" id="imgposter">
+            <dt>Movies</dt>
+            <dd id="lebelMovie"></dd>
+            <dt>Cinema</dt>
+            <dd id="lebelCinema"></dd>
+            <dt>Date</dt>
+            <dd id="lebelDate"></dd>
+            <dt>Time</dt>
+            <dd id="lebelTime"></dd>
+            <dt>Seats</dt>
+            <dd id="lebelSeats"></dd>
+        </dl>
+    </div>
+    
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

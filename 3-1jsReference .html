@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reference Techniques </title>
+
+    <script type="text/javascript">
+        "use strict";
+        function bodyload(){
+            window.document.images[0].src ="../public/images/men__1.2.jpg";
+            window.document.forms[0].elements[1].value="LogIn";
+            window.document.forms[1].elements[1].value="Register";
+        }
+    </script>
+
+</head>
+<body onload="bodyload()">
+    <div>
+        <img width="300" height="300" border="1">
+    </div>  
+    <div>
+        <form> 
+            <h3>LogIn</h3>
+            User Name :<input type="text"> <input type="button">
+        </form>
+    </div>
+    <div>
+        <form>
+            <h3>Register</h3>
+            Your Email: <input type="email"> <input type="button">
+        </form>
+    </div>
+</body>
+</html>
