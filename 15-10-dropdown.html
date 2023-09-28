@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function Addclick(){
+            var pic = document.createElement("img");
+            pic.src = "../public/images/men__1.2.jpg";
+            pic.height = "200";
+            pic.width = "200";
+            document.querySelector("figure").appendChild(pic);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="Addclick()"> ADD Image </button>
+    <figure>
+
+    </figure>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ToggleButton(){
+            var UserName = document.getElementById("UserName").value;
+            var btnLogin = document.getElementById("btnLogin");
+            if(UserName==""){
+                btnLogin.disabled = true;
+            }else{
+                btnLogin.disabled = false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>User Name</dt>
+        <dd><input type="text" onkeyup="ToggleButton()" id="UserName"></dd>
+    </dl>
+    <button id="btnLogin" disabled>LogIn</button>
+</body>
+</html>

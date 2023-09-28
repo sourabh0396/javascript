@@ -1,0 +1,13 @@
+<script type="text/javascript">
+    var cities = ["Hyd","Mumbai","Chennai","Goa","Benglore","Delhi"];
+
+    cities.splice(2,1);//removes specific element
+    cities.pop();//removes last
+    cities.shift();//removes first
+
+
+    cities.map(function(city){
+
+        document.write(`<p>${city}</p>`);
+    })
+</script>

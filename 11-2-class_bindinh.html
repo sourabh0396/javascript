@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form{
+            border: 1px solid black;
+            padding: 10px;
+        }
+        .dark-theme{
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+        .light-theme{
+            background-color: white;
+            color: black;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        function ChangeTheme(){
+            var chkmode = document.getElementById("chkmode");
+            var frmlogin = document.getElementById("frmlogin");
+            if (chkmode.checked){
+                frmlogin.className = "dark-theme";
+            }else{
+                frmlogin.className = "light-theme";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form id="frmlogin">
+            <input type="checkbox" id="chkmode" onchange="ChangeTheme()"> Dark Mode 
+            <h3>User Login</h3>
+            <dl>
+                <dt>User Name</dt>
+                <dd><input type="text"></dd>
+                <dt>Password</dt>
+                <dd><input type="password"></dd>
+            </dl>
+            <button>Login</button>
+        </form>
+    </div>
+</body>
+</html> 

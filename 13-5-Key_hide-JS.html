@@ -1,0 +1,15 @@
+<script type="text/javascript">
+    var ProductID=Symbol(); 
+    var Product={
+        [ProductID]:101,
+        "Name":"TV",
+        "Price":20000,
+        "Qty":5,
+        "Stock":true,
+        "Rating":3.4,
+    }
+    for (var key in Product){
+        document.write(`${key}<br>`)
+    }
+    document.write("Product ID=" + Product[ProductID]);
+</script>

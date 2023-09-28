@@ -1,0 +1,9 @@
+<script>
+    function GetDetails(str)
+    {
+       var name = str.substring(str.indexOf("-")+1);
+       var mobile = str.substring(str.indexOf("-"),0);
+       document.write(`Name=${name}<br> Mobile=${mobile}`);
+    }
+    GetDetails(prompt("Enter Details","mobile-namw"))
+</script>

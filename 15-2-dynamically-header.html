@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bodyload(){
+            var table = document.createElement("table");
+            table.width="200";
+            table.border="1";
+            
+            var thead = document.createElement("thead");
+            var tr = document.createElement("tr");
+            var th = document.createElement("th");
+            th.innerHTML = "product Name";
+
+            tr.appendChild(th);
+            thead.appendChild(tr);
+            table.appendChild(thead);
+            document.querySelector("section").appendChild(table);
+
+            
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <section>
+
+    </section>
+</body>
+</html>

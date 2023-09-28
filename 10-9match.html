@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>match</title>
+    <script type="text/javascript">
+        function VerifyClick(){
+            var mobile=document.getElementById("txtMobile").value;
+            var regExp=/\+91\d{10}/;
+            var mobileErrors=document.getElementById("mobileErrors");
+            if(mobile.match(regExp)){
+                document.write("Mobile Verified Successfully..");
+            }else{
+                mobileErrors.innerHTML="Invalid Mobile : +91 and 10 digits Required".fontcolor('red');
+            }
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Verify Mobile</legend>
+        <input type="text" id="txtMobile">
+        <button onclick="VerifyClick()">Verify</button>
+        <p id="mobileErrors"></p>
+    </fieldset>
+</body>
+</html>

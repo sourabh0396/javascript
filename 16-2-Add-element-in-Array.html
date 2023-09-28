@@ -1,0 +1,12 @@
+<script type="text/javascript">
+    var cities = ["Delhi","Hyd"];
+    
+    cities.unshift("Mumbai");//added to top
+    cities.push("Chennai");//added to bottom
+    cities.splice(2,0,"Benglore");//2is position and 0 is for not delete any city
+     
+ 
+    cities.map(function(city){
+        document.write(`<p> ${city} </p>`); 
+    })
+</script>

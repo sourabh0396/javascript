@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        function ThemeChange(){
+            var chkmode = document.getElementById("chkmode");
+        var frmlogin = document.getElementById("frmlogin");
+        var buttonlogin = document.querySelector("button");
+        if(chkmode.checked){
+            frmlogin.className = "bg-dark text-white w-25 p-4 border border-2 border-dark";
+            buttonlogin.className = "btn btn-light w-100";
+        }else{
+            frmlogin.className = "bg-white text-dark w-25 border border border-2 border-dark";
+            buttonlogin.className = "btn btn-dark w-100";
+        }
+        }
+    </script>
+</head> 
+<body class="container-fluid">
+    <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <form id="frmlogin" class="w-25 p-4 border border-2 border-dark">
+            <div class="form-switch">
+                 <input type="checkbox" onchange="ThemeChange()" id="chkmode" class="form-check-input">Dark Mode
+            </div>
+            <dl>
+                <dt>User Name</dt>
+                <dd><input type="text" class="form-control"></dd>
+                <dt>Password</dt>
+                <dd><input type="password" class="form-control"></dd>
+            </dl>
+            <button class="btn btn-dark w-100">LogIn</button>
+        </form>
+    </div>
+</body>
+</html> 

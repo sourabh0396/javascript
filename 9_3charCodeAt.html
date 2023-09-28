@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>charCodeAt</title>
+    <script type="text/javascript">
+        var password;
+        var passError;
+        function VerifyRequired(){
+            password=document.getElementById("txtPass").value;
+            passError=document.getElementById("passError");
+            if(password.length==0){
+                passError.innerHTML="Password can't be Empty".fontcolor('red');
+            }else{
+                passError.innerHTML=" ";
+            }
+        }
+        function VerifyLength(){
+            password=document.getElementById("txtPass").value;
+            passError=document.getElementById("passError");
+            if(password=0){
+                passError.innerHTML="Password can't be Empty".fontcolor('red');
+            }else{
+                if(password < 4){
+                    passError.innerHTML="Password is Short minimum 4 chars required".fontcolor('red');
+                }else{
+                    passError.innerHTML=" ";
+                }
+            }
+        }
+        function VerifyMobile(){
+            var mobile = document.getElementById("txtMobile").value;
+            var mobileError = document.getElementById("mobileError");
+            if(mobile.charAt(0)=="+"){
+                mobileError.innerHTML="";
+            }else{
+                mobileError.innerHTML="First Should be + sign   and country code".fontcolor('red');
+            }
+        }
+
+
+        function VerifyName(){
+            var name = document.getElementById("txtNmae").value;
+            var nameError = document.getElementById("nameError");
+            if(firstCharCode>=65 && firstCharCode<=90){
+                nameError.innerHTML=" ";
+            }else{
+                nameError="Name will start with Uppercase".fontcolor('red');
+            }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>User Name</dt>
+        <dd><input type="text" onblur="VerifyName()" id="txtName"></dd>
+        <dd id="nameError"></dd>
+        <dt>Password</dt>
+        <dd><input type="password" id="txtPass" onkeyup="VerifyLength()" onblur="VerifyRequired()" ></dd>
+        <dd id="passError"></dd>
+        <dt>Mobile</dt>
+        <dd><input type="text" id="txtMobile" onblur="VerifyMobile()"></dd>
+        <dd id="mobileError"></dd>
+    </dl>
+</body>
+</html>

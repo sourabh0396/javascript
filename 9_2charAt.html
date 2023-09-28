@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>charAt</title>
+    <script>
+        var password;
+        var pwdError;
+        function VerifyRequired(){
+            password = document.getElementById("txtPwd").value;
+            pwdError = document.getElementById("pwdError");
+            if (password.length==0){
+                pwdError.innerHTML="Password Can't be Empty".fontcolor('red');
+            }else{
+                pwdError.innerHTML=" ";
+            }
+        }
+        function VerifyLength(){
+            password = document.getElementById("txtPwd").value;
+            pwdError = document.getElementById("pwdError");
+            if(password.length==0){
+                password.innerHTML="Password Can't be Empty".fontcolor('red');
+            }else{
+                if(password.length<4){
+                    pwdError.innerHTML="Password to short minimum 4 character required".fontcolor('red');
+                }
+                else{
+                    pwdError.innerHTML="";
+                }
+            }
+        }
+        function VerifyMobile(){
+            var Mobile=document.getElementById("txtmobile").value;
+            var mobileError=document.getElementById("mobileError");
+            if(mobile.charAt(0)=="+"){
+                mobileError.innerHTML=" ";
+            }else{
+                mobileError.innerHTML="Mobile must start with + and country code".fontcolor('red');
+            }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>Password</dt>
+        <dd><input type="password" id="txtPwd" onkeyup="VerifyLength()" onblur="VerifyRequired()"></dd>
+        <dd id="pwdError"></dd>
+        <dt>Mobile</dt>
+        <dd><input type="text" id="txtmobile" onblur="VerifyMobile()" ></dd>
+        <dd id="mobileError"></dd>
+    </dl>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var mobile={
+            "title":"realme C55(Gold , 128 GB)",
+            "price":15000,
+            "photo":"../public/images/Realmi_black.JPG"
+        }
+        function bodyload(){
+            document.getElementById("lblName").innerHTML=mobile.title.fontcolor('blue').bold();
+            document.getElementById("lblPrice").innerHTML=mobile.price.toLocaleString('en-in',{style:'currency',currency:'INR'});
+            document.getElementById("imgPhoto").src=mobile.photo;
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <dl>
+        <dt>Name</dt>
+        <dd id="lblName"></dd>
+        <dt>Price</dt>
+        <dd id="lblPrice"></dd>
+        <dt>Preview</dt>
+        <dd>
+            <img id="imgPhoto">
+        </dd>
+    </dl>
+</body>
+</html>

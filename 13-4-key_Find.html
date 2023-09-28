@@ -1,0 +1,16 @@
+<script type="text/javascript">
+    var product={
+        "Name":"TV",
+        "Price":"40000",
+        "Qty":5,
+        "Stock":false,
+        "Rating":4.2,
+    }
+    // delete product.Rating;
+
+    if("Rating" in product){
+        document.write(`Rating :${product.Rating}`);
+    }else{
+        document.write(`${product.Name}Rating is Not Available`);
+    }
+</script>

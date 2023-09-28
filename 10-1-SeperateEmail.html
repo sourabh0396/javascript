@@ -1,0 +1,9 @@
+<script>
+    function GetDetails(email){
+        var atpos=email.indexOf("@");
+        var id=email.substring(atpos,0);
+        var domain=email.substring(atpos+1);
+        document.write(`Email Id=${id}<br> Domain=${domain}`);
+    }
+    GetDetails(prompt("Enteer Your Email"));
+</script>

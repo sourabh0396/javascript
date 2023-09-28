@@ -1,0 +1,8 @@
+<script>
+    function GetDetails(card){
+        var lastChars=card.substring(card.lastIndexOf("-")+1);
+        document.write(`Your Card : ${card}<br>`);
+        document.write(`Card Last 4 Chars : ${lastChars}`);
+    }
+    GetDetails(prompt("Enter 16 chars card Number"));
+</script>

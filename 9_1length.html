@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>length</title>
+    <script type="text/javascript">
+        var password;
+        var passerror;
+        function VerifyRequired(){
+            password = document.getElementById("txtpass").value;
+            passerror = document.getElementById("passError");
+            if (password.length==0){
+                passerror.innerHTML="Password Can't be Empty".fontcolor('red');
+            }
+            else{
+                passerror.innerHTML=" ";
+            }
+        }
+        function VerifyLength(){
+            password = document.getElementById("txtpass").value;
+            passerror = document.getElementById("passError");
+            if(password.length==0){
+                passerror.innerHTML="Password can't be Empty".fontcolor('red');
+            }else{
+                if (password.length < 4){
+                    passerror.innerHTML="Pass length is to Short  min 4 letter requirwd".fontcolor('red');
+                }else{
+                    passerror.innerHTML=" ";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>Password</dt>
+        <dd><input type="password" id="txtpass" onkeyup="VerifyLength()" onblur="VerifyRequired()"></dd>
+        <dd id="passError"></dd>
+    </dl>
+</body>
+</html>

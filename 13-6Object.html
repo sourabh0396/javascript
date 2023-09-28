@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        function FetchClick(){
+            fetch("../data/product.json")
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(product){
+                document.getElementById("prodimg").src=product.Image;
+                document.getElementById("lblName").innerHTML=product.Name;
+                document.getElementById("lblprice").innerHTML=product.Price.toLocalString("en-in",{style:`currency`,currency:`INR`});
+                document.getElementById("lblstock").innerHTML=product.Stock;
+                document.getElementById("lblrating").innerHTML=`${product.Rating.Rate}<span class="bi bi-star-fill text-sucess"></span>[${product.Rating.Count}]`;
+                 
+            })
+        }
+    </script> 
+</head>
+<body class="container-fluid">
+    <div class="mt-4">
+        <button class="btn btn-primary" onclick="FetchClick()">Fetch Product</button>
+    </div>
+    <div class="mt-4">
+        <div class="card m-2 p-2" style="width: 250px;">
+            <img id="prodimg" class="card-img-top" height="300">
+            <div class="card-header">
+                <dl>
+                    <dt>Name</dt>
+                    <dd id="lblname"></dd>
+                    <dt>Price</dt>
+                    <dd id="lblprice"></dd>
+                    <dt>Stock</dt>
+                    <dd id="lblstock"></dd>
+                    <dt>Rating</dt>
+                    <dd id="lblRating"></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

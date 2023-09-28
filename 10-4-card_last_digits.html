@@ -1,0 +1,7 @@
+<script>
+    function GetDetails(card){
+        var totalchars=card.length;
+        document.write(`Lasr 4 Chars : ${card.substring(totalchars,12)}`);
+    }
+    GetDetails(prompt("Enter 16 Digit card No without '-' "))
+</script>
